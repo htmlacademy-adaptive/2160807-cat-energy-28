@@ -1,0 +1,42 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: @lato;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: @dark-gray;
+  background-color: @white;
+  width: 320px;
+  margin: 0;
+
+  @media (min-width: @w-tablet) {
+    min-width: @w-tablet;
+  }
+
+  @media (min-width: @w-desktop) {
+    min-width: @w-desktop;
+  }
+}
+
+.title {
+  font-family: @oswald;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
