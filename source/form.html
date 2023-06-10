@@ -48,43 +48,45 @@
           <h2 class="form__title title">Подбор программы</h2>
           <p class="form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
           <form class="form__container" action=" https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="form__group form__group-info">
-              <ul class="form__group-list">
-                <li class="form__group-item form__group-item--info">
-                  <label class="form__group-subtitle" for="name">ИМЯ:*</label>
-                  <input class="form__group-input input-style" type="text" id="name" placeholder="Введите имя кота" value="Барсик" required>
-                </li>
-                <li class="form__group-item form__group-item--info">
-                  <label class="form__group-subtitle" for="weight">Вес (кг):*</label>
-                  <input class="form__group-input input-style" type="text" id="weight" placeholder="Введите вес кота" value="7" required>
-                </li>
-                <li class="form__group-item form__group-item--info">
-                  <label class="form__group-subtitle" for="age">Возраст (лет):</label>
-                  <input class="form__group-input input-style" type="text" id="age" placeholder="Введите возраст кота" value="7">
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="form__group form__group-programs">
-              <ul class="form__group-list">
-                <li class="form__group-item form__group-item--programs">
-                  <input class="form__group-radio visually-hidden" type="radio" name="programs" id="lose" value="lose" checked>
-                  <label class="form__group-subtitle" for="lose">похудение</label>
-                </li>
-                <li class="form__group-item form__group-item--programs">
-                  <input class="form__group-radio visually-hidden" type="radio" name="programs" id="gain" value="gain">
-                  <label class="form__group-subtitle" for="gain">Набор массы</label>
-                </li>
-                <li class="form__group-item form__group-item--programs">
-                  <input class="form__group-radio visually-hidden" type="radio" name="programs" id="dontknow" value="dontknow">
-                  <label class="form__group-subtitle" for="dontknow">Не знаю (Нужен ваш совет)</label>
-                </li>
-              </ul>
-            </fieldset>
+            <div class="form__about-cat">
+              <fieldset class="form__group form__group-info">
+                <ul class="form__group-list">
+                  <li class="form__group-item form__group-item--info">
+                    <label class="form__group-subtitle" for="name">ИМЯ:*</label>
+                    <input class="form__group-input input-style" type="text" id="name" placeholder="Введите имя кота" value="Барсик" required>
+                  </li>
+                  <li class="form__group-item form__group-item--info">
+                    <label class="form__group-subtitle" for="weight">Вес&nbsp;(кг):*</label>
+                    <input class="form__group-input input-style" type="text" id="weight" placeholder="Введите вес кота" value="7" required>
+                  </li>
+                  <li class="form__group-item form__group-item--info">
+                    <label class="form__group-subtitle" for="age">Возраст&nbsp;(лет):</label>
+                    <input class="form__group-input input-style" type="text" id="age" placeholder="Введите возраст кота" value="7">
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="form__group form__group-programs">
+                <ul class="form__group-list">
+                  <li class="form__group-item form__group-item--programs">
+                    <input class="form__group-radio visually-hidden" type="radio" name="programs" id="lose" value="lose" checked>
+                    <label class="form__group-subtitle form__radio-style" for="lose">похудение</label>
+                  </li>
+                  <li class="form__group-item form__group-item--programs">
+                    <input class="form__group-radio visually-hidden" type="radio" name="programs" id="gain" value="gain">
+                    <label class="form__group-subtitle form__radio-style" for="gain">Набор массы</label>
+                  </li>
+                  <li class="form__group-item form__group-item--programs">
+                    <input class="form__group-radio visually-hidden" type="radio" name="programs" id="dontknow" value="dontknow">
+                    <label class="form__group-subtitle form__radio-style" for="dontknow">Не знаю (Нужен ваш совет)</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
             <fieldset class="form__group form__group-contacts">
               <legend class="form__group-title title">Контактные данные (владельца кота)</legend>
-              <ul class="form__group-list">
+              <ul class="form__group-list form__group-list--contacts">
                 <li class="form__group-item form__group-item--contacts">
-                  <label class="form__group-subtitle" for="email">E-mail:*</label>
+                  <label class="form__group-subtitle" for="email">Email:*</label>
                   <input class="form__group-input input-style form__group-input--email" id="email" type="email" placeholder="Введите e-mail" value="kuklachev@gmail.com" required>
                 </li>
                 <li class="form__group-item form__group-item--contacts">
@@ -98,23 +100,23 @@
               <textarea class="form__group-textarea input-style" name="comments" id="comments" placeholder="Расскажите обо всех повАдках кота"></textarea>
             </fieldset>
             <fieldset class="form__group form__group-additionally">
-              <legend class="form__group-title title">Дополнительно</legend>
-              <ul class="form__group-list">
+              <legend class="form__group-title title form__group-title--additionally">Дополнительно</legend>
+              <ul class="form__group-list form__group-list--additionally">
                 <li class="form__group-item form__group-item--additionally">
-                  <input type="checkbox" class="visually-hidden" name="addetionally" id="sugar" checked>
-                  <label class="form__group-subtitle" for="sugar">сахарозаменитель</label>
+                  <input type="checkbox" class="form__group-checkbox visually-hidden" name="addetionally" id="sugar" checked>
+                  <label class="form__group-subtitle form__checkbox-style" for="sugar">сахарозаменитель</label>
                 </li>
                 <li class="form__group-item form__group-item--additionally">
-                  <input type="checkbox" class="visually-hidden" name="addetionally" id="water">
-                  <label class="form__group-subtitle" for="water">питьевая вода</label>
+                  <input type="checkbox" class="form__group-checkbox visually-hidden" name="addetionally" id="water">
+                  <label class="form__group-subtitle form__checkbox-style" for="water">питьевая вода</label>
                 </li>
                 <li class="form__group-item form__group-item--additionally">
-                  <input type="checkbox" class="visually-hidden" name="addetionally" id="milk">
-                  <label class="form__group-subtitle" for="milk">молоко</label>
+                  <input type="checkbox" class="form__group-checkbox visually-hidden" name="addetionally" id="milk">
+                  <label class="form__group-subtitle form__checkbox-style" for="milk">молоко</label>
                 </li>
                 <li class="form__group-item form__group-item--additionally">
-                  <input type="checkbox" class="visually-hidden" name="addetionally" id="vitamin">
-                  <label class="form__group-subtitle" for="vitamin">витамины</label>
+                  <input type="checkbox" class="form__group-checkbox visually-hidden" name="addetionally" id="vitamin">
+                  <label class="form__group-subtitle form__checkbox-style" for="vitamin">витамины</label>
                 </li>
               </ul>
             </fieldset>
