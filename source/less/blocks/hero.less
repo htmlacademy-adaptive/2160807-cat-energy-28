@@ -1,12 +1,68 @@
 .hero {
-  background-image: url("../img/index-background.png");
+  background-image: url("../img/index-background-2.png");
   background-position-y: 0;
   background-position-x: center;
   background-repeat: no-repeat;
   min-height: 480px;
   position: relative;
-  padding: 0 20px;
-  padding-top: 27px;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    background-color: fade(@basic-green, 85%);
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 302px;
+  }
+
+  @media (min-width: @w-tablet) {
+    background-image: none;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: @w-desktop) {
+    background-image: url("../img/cat.jpg");
+    background-repeat: no-repeat;
+    background-size: 963px;
+    background-position-x: 720px;
+    min-height: 642px;
+    top: -118px;
+    z-index: -1;
+    .flex-center();
+
+    &::before {
+      display: block;
+      height: 642px;
+      width: 50%;
+      right: 0;
+      left: auto;
+    }
+  }
+}
+
+.hero__wrapper {
+  position: relative;
+  z-index: 2;
+  padding: 27px 20px 20px;
+  .flex-center();
+
+
+  @media (min-width: @w-tablet) {
+    background-image: none;
+    padding: 0 120px;
+    padding-top: 50px;
+    align-items: flex-start;
+  }
+
+  @media (min-width: @w-desktop) {
+    padding: 168px 120px 0;
+    width: 1440px;
+    box-sizing: border-box;
+  }
 }
 
 .hero__title {
@@ -14,6 +70,15 @@
   text-align: center;
   margin-bottom: 25px;
   text-transform: none;
+  width: 250px;
+
+  @media (min-width: @w-tablet) {
+    color: @black;
+    width: 420px;
+    .title-tablet();
+    text-align: left;
+    margin-bottom: 41px;
+  }
 }
 
 .hero__description {
@@ -23,4 +88,36 @@
   font-weight: 400;
   line-height: 14px;
   margin-bottom: 29px;
+  text-transform: uppercase;
+
+  @media (min-width: @w-tablet) {
+    color: @black;
+    width: 420px;
+    text-align: left;
+    margin-bottom: 49px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
+
+.hero__link {
+  width: 100%;
+
+  @media (min-width: @w-tablet) {
+    width: 244px;
+    height: 54px;
+    padding: 17px 26px;
+    font-size: 20px;
+  }
+}
+
+.hero__image-wrapper {
+  @media (min-width: @w-tablet) {
+    position: absolute;
+    z-index: -1;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+

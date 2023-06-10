@@ -1,8 +1,28 @@
 .main-footer {
+  background-color: @basic-gray;
+
+  @media (min-width: @w-desktop) {
+    .flex-center();
+  }
+}
+
+.main-footer__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: @basic-gray;
+  padding: 40px 20px;
+
+  @media (min-width: @w-tablet) {
+    padding: 55px 30px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @w-desktop) {
+    padding: 66px 110px;
+    width: 1440px;
+    box-sizing: border-box;
+  }
 }
 
 .main-footer__social-list {
