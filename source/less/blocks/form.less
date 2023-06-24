@@ -180,6 +180,19 @@
     box-sizing: border-box;
   }
 
+  &:hover::before {
+    border-color: #bababa;
+  }
+
+  &:disabled {
+    opacity: 30%;
+  }
+
+  &:disabled::before {
+    border-color: #bababa;
+    opacity: 30%;
+  }
+
   @media (min-width: @w-tablet) {
     padding-left: 60px;
 
@@ -188,6 +201,10 @@
       height: 40px;
     }
   }
+}
+
+.form__group-radio:focus ~ .form__radio-style::before {
+  border-color: #bababa;
 }
 
 .form__group-radio:checked ~ .form__radio-style::after {
@@ -211,16 +228,47 @@
 .form__group-contacts {
   padding: 26px 0 24px;
 
-  & legend {
+  & .form__group-title {
     padding-top: 26px;
+    width: 182px;
+    position: relative;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      width: 300%;
+      height: 2px;
+      background-color: @basic-green;
+      left: 200px;
+      top: 42px;
+    }
   }
 
   @media (min-width: @w-tablet) {
     padding-bottom: 0;
     margin-bottom: 65px;
 
-    & legend {
+    & .form__group-title {
       margin-bottom: 76px;
+      width: 514px;
+      background-color: @white;
+      padding: 26px 40px 0;
+      margin-left: -40px;
+
+      &::before {
+        top: 47px;
+        z-index: -2;
+        left: -30px;
+      }
+    }
+  }
+
+  @media (min-width: @w-desktop) {
+    & .form__group-title {
+      &::before {
+        left: -500px;
+        width: 500%;
+      }
     }
   }
 }
@@ -243,7 +291,13 @@
   }
 
   & label {
-    margin-right: 13px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  & input {
+    margin-left: 13px;
   }
 
   @media (min-width: @w-tablet) {
@@ -257,6 +311,44 @@
   @media (min-width: @w-desktop) {
     width: 570px;
   }
+}
+
+.form__group-subtitle--email {
+  position: relative;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    mask-image: url("../img/stack.svg#icon-email");
+    mask-repeat: no-repeat;
+    background-color: #222222;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.form__group-subtitle--tel {
+  position: relative;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    mask-image: url("../img/stack.svg#icon-phone");
+    mask-repeat: no-repeat;
+    background-color: #222222;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.form__group-input--email:focus ~ .form__group-subtitle--email::after {
+  background-color: @basic-green;
 }
 
 .form__group-subtitle {
@@ -293,9 +385,37 @@
 
 .form__group-title--comments {
   margin-bottom: 37px;
+  position: relative;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 1440px;
+    height: 2px;
+    background-color: @basic-green;
+    left: 140px;
+    top: 15px;
+  }
 
   @media (min-width: @w-tablet) {
     margin-bottom: 76px;
+    background-color: @white;
+    width: 182px;
+    padding: 0 38px;
+    margin-left: -38px;
+
+    &::before {
+      left: -40px;
+      top: 21px;
+      z-index: -2;
+    }
+  }
+
+  @media (min-width: @w-desktop) {
+    &::before {
+      left: -500px;
+      width: 4000px;
+    }
   }
 }
 
@@ -336,9 +456,36 @@
 
 .form__group-title--additionally {
   margin-bottom: 34px;
+  position: relative;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 1440px;
+    height: 2px;
+    background-color: @basic-green;
+    left: 164px;
+    top: 15px;
+  }
 
   @media (min-width: @w-tablet) {
     margin-bottom: 57px;
+    background-color: @white;
+    padding: 0 40px;
+    margin-left: -40px;
+
+    &::before {
+      left: -80px;
+      top: 22px;
+      z-index: -2;
+    }
+  }
+
+  @media (min-width: @w-desktop) {
+    &::before {
+      left: -500px;
+      width: 4000px;
+    }
   }
 }
 
@@ -394,6 +541,19 @@
     box-sizing: border-box;
   }
 
+  &:hover::before {
+    border-color: #bababa;
+  }
+
+  &:disabled {
+    opacity: 30%;
+  }
+
+  &:disabled::before {
+    border-color: #bababa;
+    opacity: 30%;
+  }
+
   @media (min-width: @w-tablet) {
     padding-left: 60px;
 
@@ -402,6 +562,10 @@
       height: 40px;
     }
   }
+}
+
+.form__group-checkbox:focus ~ .form__checkbox-style::before {
+  border-color: #bababa;
 }
 
 .form__group-checkbox:checked ~ .form__checkbox-style::after {

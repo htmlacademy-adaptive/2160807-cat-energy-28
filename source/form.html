@@ -10,7 +10,11 @@
     <header class="main-header">
       <div class="main-header__wrapper">
         <a class="main-header__logo" href="index.html">
-          <img src="img/logo-mobile.png" width="191" height="38" alt="логотип cat energy">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.png 1x, img/logo-desktop@2x.png 2x" width="202">
+            <source media="(min-width: 769px)" srcset="img/logo-tablet.png 1x, img/logo-tablet@2x.png 2x" width="174">
+            <img src="img/logo-mobile.png" width="191" height="38" alt="логотип cat energy" srcset="img/logo-mobile@2x.png 2x">
+          </picture>
         </a>
         <nav class="main-nav">
           <div class="main-nav__wrapper main-nav__wrapper--closed main-nav__wrapper--nojs">
@@ -86,12 +90,14 @@
               <legend class="form__group-title title">Контактные данные (владельца кота)</legend>
               <ul class="form__group-list form__group-list--contacts">
                 <li class="form__group-item form__group-item--contacts">
-                  <label class="form__group-subtitle" for="email">Email:*</label>
-                  <input class="form__group-input input-style form__group-input--email" id="email" type="email" placeholder="Введите e-mail" value="kuklachev@gmail.com" required>
+                  <label class="form__group-subtitle form__group-subtitle--email" for="email">Email:*
+                    <input class="form__group-input input-style form__group-input--email" id="email" type="email" placeholder="Введите e-mail" value="kuklachev@gmail.com" required>
+                  </label>
                 </li>
                 <li class="form__group-item form__group-item--contacts">
-                  <label class="form__group-subtitle" for="tel">телефон*:</label>
-                  <input class="form__group-input input-style form__group-input--tel" type="tel" id="tel" placeholder="Введите телефон" value="8 (960) 900-60-90" required>
+                  <label class="form__group-subtitle form__group-subtitle--tel" for="tel">телефон*:
+                    <input class="form__group-input input-style form__group-input--tel" type="tel" id="tel" placeholder="Введите телефон" value="8 (960) 900-60-90" required>
+                  </label>
                 </li>
               </ul>
             </fieldset>

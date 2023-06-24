@@ -53,7 +53,11 @@
           <h2 class="hero__title title">Функциональное питание для котов</h2>
           <p class="hero__description description">Занялся собой? Займись котом!</p>
           <div class="hero__image-wrapper">
-            <img class="hero__image" src="img/index-cat-mobile.png" width="280" height="270" alt="Cat Energy Pro с курицей 500г">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/index-cat-desktop.png 1x, img/index-cat-desktop@2x.png 2x" width="552">
+              <source media="(min-width: 769px)" srcset="img/index-cat-tablet.png 1x, img/index-cat-tablet@2x.png 2x" width="709">
+              <img class="hero__image" src="img/index-cat-mobile.png" width="280" height="270" alt="Cat Energy Pro с курицей 500г" srcset="img/index-cat-mobile@2x.png 2x">
+            </picture>
           </div>
           <a class="hero__link button-green" href="form.html">подобрать программу</a>
         </div>
@@ -110,10 +114,16 @@
           </div>
           <div class="example__slider">
             <div class="example__slider-img example__slider-img--before">
-              <img class="example__img-before" width="140" height="256" src="img/slider-mobile-before@1x.png" alt="кот до">
+              <picture>
+                <source media="(min-width: 769px)" srcset="img/slider-tablet-before@1x.png 1x, img/slider-tablet-before@2x.png 2x" width="560">
+                <img class="example__img-before" width="140" height="256" src="img/slider-mobile-before@1x.png" alt="кот до" srcset="img/slider-mobile-before@2x.png 2x">
+              </picture>
             </div>
             <div class="example__slider-img example__slider-img--after">
-              <img class="example__img-after" width="140" height="256" src="img/slider-mobile-after@1x.png" alt="кот после">
+              <picture>
+                <source media="(min-width: 769px)" srcset="img/slider-tablet-after@1x.png 1x, img/slider-tablet-after@2x.png 2x" width="560">
+                <img class="example__img-after" width="140" height="256" src="img/slider-mobile-after@1x.png" alt="кот после" srcset="img/slider-mobile-after@2x.png 2x">
+              </picture>
             </div>
             <div class="example__curtain">
               <button class="example__toggle" type="button">

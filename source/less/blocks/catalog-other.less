@@ -158,6 +158,7 @@
   width: 280px;
   min-height: 290px;
   position: relative;
+  margin: 0 auto;
 
   &::before {
     content: " ";
@@ -168,6 +169,19 @@
     z-index: 0;
   }
 
+  &::after {
+    content: " ";
+    position: absolute;
+    width: 78px;
+    height: 80px;
+    background-image: url("../../img/stack.svg#gift-icon");
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 59px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   @media (min-width: @w-tablet) {
     width: 100%;
     min-height: 200px;
@@ -176,6 +190,12 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    &::after {
+      top: 57px;
+      left: 77px;
+      transform: translateX(0);
+    }
   }
 
   @media (min-width: @w-desktop) {
@@ -183,6 +203,13 @@
     min-height: 289px;
     align-items: flex-end;
     justify-content: center;
+    margin: 0;
+
+    &::after {
+      top: 56px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
 

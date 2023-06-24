@@ -25,6 +25,19 @@
   padding: 10px 20px 17px;
   box-sizing: border-box;
   display: block;
+  outline: none;
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+
+  &:focus {
+    opacity: 80%;
+  }
 
   & img {
     display: block;
@@ -58,6 +71,19 @@
   justify-content: center;
   width: 100%;
   border-top: 1px solid #e6e6e6;
+  outline: none;
+
+  &:hover {
+    color: fade(@black, 60%);
+  }
+
+  &:active {
+    color: fade(@black, 30%);
+  }
+
+  &:focus {
+    color: fade(@black, 60%);
+  }
 
   @media (min-width: @w-tablet) {
     font-size: 18px;
@@ -75,10 +101,22 @@
     &--white {
       background-color: transparent;
       color: @white;
+    }
 
-      &--active {
-        border-bottom: 2px solid @white;
-      }
+    &--white&--active {
+      border-bottom: 2px solid @white;
+    }
+
+    &--white:hover {
+      color: fade(@white, 60%);
+    }
+
+    &--white:active {
+      color: fade(@white, 30%);
+    }
+
+    &--white:focus {
+      color: fade(@white, 60%);
     }
   }
 }

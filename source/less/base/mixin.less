@@ -26,6 +26,20 @@
   box-sizing: border-box;
   text-decoration: none;
   cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background-color: @basic-green-2;
+  }
+
+  &:active {
+    background-color: @basic-green-2;
+    color: fade(@white, 30%);
+  }
+
+  &:focus {
+    background-color: @basic-green-2;
+  }
 }
 
 .button-gray {
@@ -34,6 +48,15 @@
   background-color: @basic-gray;
   font-size: 16px;
   line-height: 20px;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    color: fade(@dark-gray, 30%);
+  }
 }
 
 .title-tablet() {
@@ -61,6 +84,20 @@
   color: @dark-gray;
   text-transform: uppercase;
   width: 100%;
+  outline: none;
+
+  &:hover {
+    border-color: @input-gray;
+  }
+
+  &:focus {
+    border: 2px solid @dark-gray;
+    box-sizing: border-box;
+  }
+
+  &--error {
+    border-color: @error-color;
+  }
 
   @media (min-width: @w-tablet) {
     font-size: 20px;
