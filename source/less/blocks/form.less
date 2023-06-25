@@ -277,6 +277,7 @@
   @media (min-width: @w-desktop) {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
@@ -333,7 +334,7 @@
 .form__group-subtitle--tel {
   position: relative;
 
-  &::before {
+  &::after {
     content: " ";
     position: absolute;
     width: 20px;
@@ -347,7 +348,11 @@
   }
 }
 
-.form__group-input--email:focus ~ .form__group-subtitle--email::after {
+.form__group-subtitle--email:focus-within::after {
+  background-color: @basic-green;
+}
+
+.form__group-subtitle--tel:focus-within::after {
   background-color: @basic-green;
 }
 
@@ -494,6 +499,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  @media (min-width: @w-desktop) {
+    justify-content: flex-start;
+    row-gap: 20px;
   }
 }
 

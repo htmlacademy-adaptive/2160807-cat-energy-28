@@ -32,6 +32,7 @@
   .list-reset();
   .flex-center();
   gap: 20px;
+  align-items: start;
 
   @media (min-width: @w-tablet) {
     display: grid;
@@ -98,6 +99,10 @@
       background-position-y: 25px;
       top: 0;
     }
+  }
+
+  @media (min-width: @w-desktop) {
+    align-items: start;
   }
 }
 

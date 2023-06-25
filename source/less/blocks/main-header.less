@@ -54,6 +54,13 @@
   @media (min-width: @w-tablet) {
     display: flex;
     gap: 35px;
+    flex-wrap: wrap;
+    row-gap: 0;
+    max-width: 565px;
+  }
+
+  @media (min-width: @w-desktop) {
+    max-width: 965px;
   }
 }
 
@@ -222,5 +229,17 @@
     &::after {
       display: none;
     }
+  }
+}
+
+.main-nav__wrapper--nojs ~ .main-nav__toggle {
+  display: none;
+}
+
+@media (max-width: @w-mobile) {
+  .main-nav__wrapper--nojs.main-nav__wrapper--closed {
+    position: relative;
+    display: block;
+    z-index: 4;
   }
 }

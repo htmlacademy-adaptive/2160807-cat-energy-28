@@ -3,9 +3,32 @@
 
   & iframe {
     width: 100%;
+    border: none;
+    display: block;
+    background-image: url("../../img/location.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/location@2x.png");
+    }
 
     @media (min-width: @w-tablet) {
       height: 400px;
+      background-image: url("../img/location-tablet@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/location-tablet@2x.png");
+      }
+    }
+
+    @media (min-width: @w-desktop) {
+      background-image: url("../img/location-desktop@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/location-desktop@2x.png");
+      }
     }
   }
 
