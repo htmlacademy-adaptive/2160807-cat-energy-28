@@ -5,7 +5,7 @@
 }
 
 .form__wrapper {
-  padding: 27px 20px 37px;
+  padding: 27px 20px 30px;
   border-top: 1px solid #d9d9d9;
 
   @media (min-width: @w-tablet) {
@@ -14,7 +14,7 @@
   }
 
   @media (min-width: @w-desktop) {
-    padding: 60px 110px 82px;
+    padding: 74px 110px 82px;
     box-sizing: border-box;
     width: 1440px;
   }
@@ -31,7 +31,7 @@
   }
 
   @media (min-width: @w-desktop) {
-    margin-bottom: 46px;
+    margin-bottom: 56px;
   }
 }
 
@@ -66,6 +66,7 @@
   @media (min-width: @w-desktop) {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 42px;
   }
 }
 
@@ -79,6 +80,7 @@
 
   @media (min-width: @w-desktop) {
     width: 570px;
+    margin: 0;
   }
 }
 
@@ -129,7 +131,7 @@
     border: 1px solid #e7e7e7;
     padding: 25px 28px;
     box-sizing: border-box;
-    margin-bottom: 75px;
+    margin-bottom: 48px;
 
     &::before,
     &::after {
@@ -139,6 +141,7 @@
 
   @media (min-width: @w-desktop) {
     width: 570px;
+    margin: 0;
   }
 }
 
@@ -226,12 +229,13 @@
 }
 
 .form__group-contacts {
-  padding: 26px 0 24px;
+  padding: 26px 0 23px;
 
   & .form__group-title {
     padding-top: 26px;
     width: 182px;
     position: relative;
+    margin-bottom: 10px;
 
     &::before {
       content: " ";
@@ -246,14 +250,14 @@
 
   @media (min-width: @w-tablet) {
     padding-bottom: 0;
-    margin-bottom: 65px;
+    margin-bottom: 67px;
 
     & .form__group-title {
-      margin-bottom: 76px;
+      margin-bottom: 49px;
       width: 514px;
       background-color: @white;
       padding: 26px 40px 0;
-      margin-left: -40px;
+      margin-left: -41px;
 
       &::before {
         top: 47px;
@@ -264,6 +268,8 @@
   }
 
   @media (min-width: @w-desktop) {
+    margin-bottom: 48px;
+
     & .form__group-title {
       &::before {
         left: -500px;
@@ -307,11 +313,23 @@
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+
+    & input {
+      margin-left: 27px;
+    }
   }
 
   @media (min-width: @w-desktop) {
     width: 570px;
   }
+}
+
+.form__group-input--email {
+  padding-left: 16px;
+}
+
+.form__group-input--tel {
+  padding-left: 13px;
 }
 
 .form__group-subtitle--email {
@@ -381,10 +399,14 @@
 }
 
 .form__group-comments {
-  margin-bottom: 23px;
+  margin-bottom: 20px;
 
   @media (min-width: @w-tablet) {
-    margin-bottom: 65px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @w-desktop) {
+    margin-bottom: 63px;
   }
 }
 
@@ -452,10 +474,14 @@
 }
 
 .form__group-additionally {
-  margin-bottom: 34px;
+  margin-bottom: 32px;
+
+  @media (min-width: @w-tablet) {
+    margin-bottom: 20px;
+  }
 
   @media (min-width: @w-desktop) {
-    margin-bottom: 65px;
+    margin-bottom: 60px;
   }
 }
 
@@ -504,6 +530,7 @@
   @media (min-width: @w-desktop) {
     justify-content: flex-start;
     row-gap: 20px;
+    column-gap: 105px;
   }
 }
 
@@ -516,19 +543,19 @@
     margin-bottom: 13px;
   }
 
-  .form__group-subtitle {
-    color: #222222;
-    padding-left: 60px;
-  }
-
   @media (min-width: @w-tablet) {
     height: 40px;
     min-width: 221px;
-    margin-right: 114px;
+    margin-right: 66px;
+
+    &:not(:last-child) {
+      margin-bottom: 33px;
+    }
   }
 
   @media (min-width: @w-desktop) {
-    margin-right: 84px;
+    margin-right: 0;
+    min-width: 219px;
 
     &:not(:last-child) {
       margin-bottom: 0;
@@ -538,7 +565,8 @@
 
 .form__checkbox-style {
   position: relative;
-  padding-left: 45px;
+  color: #222222;
+  padding-left: 46px;
 
   &::before {
     content: " ";
@@ -601,6 +629,7 @@
   @media (min-width: @w-tablet) {
     display: flex;
     align-items: center;
+    margin-left: 1px;
   }
 }
 
@@ -614,10 +643,13 @@
     min-width: 282px;
     margin-bottom: 0;
     margin-right: 64px;
+    min-height: 52px;
+    font-size: 20px;
   }
 
   @media (min-width: @w-desktop) {
     min-width: 568px;
+    margin-right: 84px;
   }
 }
 
@@ -625,5 +657,9 @@
   text-align: center;
   display: block;
   color: @black;
+
+  @media (min-width: @w-desktop) {
+    font-size: 16px;
+  }
 }
 
