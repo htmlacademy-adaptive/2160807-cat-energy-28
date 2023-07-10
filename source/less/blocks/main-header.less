@@ -1,0 +1,253 @@
+.main-header {
+  @media (min-width: @w-desktop) {
+    .flex-center();
+  }
+}
+
+.main-header__wrapper {
+  min-width: 320px;
+  min-height: 65px;
+
+  @media (min-width: @w-tablet) {
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @w-desktop) {
+    padding: 53px 110px 0;
+    width: 1440px;
+    box-sizing: border-box;
+  }
+}
+
+.main-header__logo {
+  padding: 10px 20px 17px;
+  box-sizing: border-box;
+  display: block;
+  outline: none;
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+
+  &:focus {
+    opacity: 80%;
+  }
+
+  & img {
+    display: block;
+  }
+
+  @media (min-width: @w-tablet) {
+    padding: 0;
+  }
+}
+
+.main-nav__list {
+  .list-reset();
+
+  @media (min-width: @w-tablet) {
+    display: flex;
+    gap: 36px;
+    flex-wrap: wrap;
+    row-gap: 0;
+    max-width: 565px;
+  }
+
+  @media (min-width: @w-desktop) {
+    max-width: 965px;
+    margin-top: 2px;
+    margin-right: 1px;
+    gap: 35px;
+  }
+}
+
+.main-nav__link {
+  .link-reset();
+  text-transform: uppercase;
+  font-family: @oswald;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  display: flex;
+  background-color: @white;
+  padding-top: 22px;
+  padding-bottom: 24px;
+  justify-content: center;
+  width: 100%;
+  border-top: 1px solid #e6e6e6;
+  outline: none;
+
+  &:hover {
+    color: fade(@black, 60%);
+  }
+
+  &:active {
+    color: fade(@black, 30%);
+  }
+
+  &:focus {
+    color: fade(@black, 60%);
+  }
+
+  @media (min-width: @w-tablet) {
+    font-size: 18px;
+    line-height: 22px;
+    padding-top: 18px;
+    padding-bottom: 7px;
+    border-top: none;
+    letter-spacing: -0.5px;
+
+    &--active {
+      border-bottom: 2px solid @basic-green;
+    }
+  }
+
+  @media (min-width: @w-desktop) {
+    font-size: 20px;
+    letter-spacing: -0.6px;
+    padding-bottom: 11px;
+
+    &--white {
+      background-color: transparent;
+      color: @white;
+    }
+
+    &--white&--active {
+      border-bottom: 2px solid @white;
+    }
+
+    &--white:hover {
+      color: fade(@white, 60%);
+    }
+
+    &--white:active {
+      color: fade(@white, 30%);
+    }
+
+    &--white:focus {
+      color: fade(@white, 60%);
+    }
+  }
+}
+
+.main-nav {
+  position: relative;
+}
+
+@media (max-width: @w-mobile) {
+  .main-nav__wrapper--closed {
+    display: none;
+  }
+
+  .main-nav__wrapper--opened {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+  }
+}
+
+.main-nav__wrapper--closed ~ .main-nav__toggle {
+  width: 23px;
+  height: 22px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  right: 20px;
+  top: -44px;
+  z-index: 4;
+
+  @media (min-width: @w-tablet) {
+    display: none;
+  }
+}
+
+.main-nav__wrapper--closed ~ .main-nav__toggle::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 23px;
+  height: 1.5px;
+  background-color: @black;
+  box-shadow: 0 8px 0 0 @black, 0 18px 0 0 @black;
+  z-index: 10;
+  outline: none;
+
+  &:active::before {
+    opacity: 30%;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 60%;
+  }
+}
+
+.main-nav__wrapper--opened ~ .main-nav__toggle {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  right: 20px;
+  top: -45px;
+  z-index: 10;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -3px;
+    width: 25px;
+    height: 2px;
+    background-color: @black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+
+  &:hover {
+    opacity: 30%;
+  }
+
+  @media (min-width: @w-tablet) {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.main-nav__wrapper--nojs ~ .main-nav__toggle {
+  display: none;
+}
+
+@media (max-width: @w-mobile) {
+  .main-nav__wrapper--nojs.main-nav__wrapper--closed {
+    position: relative;
+    display: block;
+    z-index: 4;
+  }
+}

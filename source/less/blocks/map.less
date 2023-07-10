@@ -1,0 +1,107 @@
+.map {
+  position: relative;
+
+  & iframe {
+    width: 100%;
+    border: none;
+    display: block;
+    background-image: url("../../img/location.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/location@2x.png");
+    }
+
+    @media (min-width: @w-tablet) {
+      height: 400px;
+      background-image: url("../img/location-tablet@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/location-tablet@2x.png");
+      }
+    }
+
+    @media (min-width: @w-desktop) {
+      background-image: url("../img/location-desktop@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/location-desktop@2x.png");
+      }
+    }
+  }
+
+  @media (min-width: @w-desktop) {
+    .flex-center();
+  }
+}
+
+.map__wrapper {
+  @media (min-width: @w-desktop) {
+    background-color: transparent;
+    position: absolute;
+    width: 1440px;
+    padding-top: 95px;
+    padding-left: 110px;
+    box-sizing: border-box;
+  }
+}
+
+.map__container {
+  padding: 26px 20px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @w-tablet) {
+    padding: 60px 70px;
+  }
+
+  @media (min-width: @w-desktop) {
+    width: 565px;
+    min-height: 198px;
+    padding: 60px 60px 56px 80px;
+    box-sizing: border-box;
+    background-color: @white;
+  }
+}
+
+.map--gray {
+  background-color: @basic-gray;
+}
+
+.map__title {
+  color: @font-black;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: @w-tablet) {
+    width: 172px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.map__address {
+  font-style: normal;
+  width: 278px;
+  line-height: 20px;
+
+  @media (min-width: @w-tablet) {
+    font-size: 16px;
+    line-height: 20px;
+    width: 160px;
+    text-align: end;
+    margin-top: -4px;
+
+    & span {
+      margin-top: 20px;
+      display: inline-block;
+    }
+  }
+
+  @media (min-width: @w-desktop) {
+    text-align: start;
+    width: 175px;
+  }
+}
