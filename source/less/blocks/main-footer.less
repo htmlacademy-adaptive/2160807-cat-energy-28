@@ -13,20 +13,20 @@
   padding: 40px 20px;
 
   @media (min-width: @w-tablet) {
-    padding: 55px 30px;
+    padding: 58px 30px;
     flex-direction: row;
     justify-content: space-between;
   }
 
   @media (min-width: @w-desktop) {
-    padding: 66px 110px;
+    padding: 68px 110px;
     width: 1440px;
     box-sizing: border-box;
   }
 }
 
 .main-footer__logo-link {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
   position: relative;
   outline: none;
 
@@ -36,7 +36,7 @@
     width: 280px;
     height: 1px;
     background-color: #d9d9d9;
-    bottom: -20px;
+    bottom: -16px;
     left: -76px;
   }
 
@@ -54,6 +54,11 @@
 
   @media (min-width: @w-tablet) {
     margin: 0;
+
+    & img {
+      width: 144px;
+      height: 25px;
+    }
 
     &::before {
       display: none;
@@ -80,6 +85,7 @@
 
   @media (min-width: @w-tablet) {
     margin: 0;
+    margin-left: 24px;
 
     &::before {
       display: none;
@@ -145,12 +151,12 @@
     content: " ";
     mask-image: url("../img/stack.svg#html-logo");
     mask-repeat: no-repeat;
-    mask-size: 38px;
+    mask-size: 40px;
     background-color: @special-gray;
     height: 40px;
     width: 30px;
     mask-position: center;
-    right: 0;
+    right: -2px;
   }
 
   &:hover::before {
